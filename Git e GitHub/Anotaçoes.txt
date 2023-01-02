@@ -1,0 +1,42 @@
+link para download do git:https://git-scm.com/downloads
+
+link para consultar comandos do git: https://comandosgit.github.io/
+
+Passo a passo para gerar e utilizar uma chave SSH:
+
+No git bash
+
+1 - ssh-keygen -t ed25519 -C 'seu email, o mesmo cadastrado no GitHub';
+
+2 - Digitar uma senha e confirmar ela novamente;
+
+3 - Ir ate a pasta onde foi criada a chave SSH;
+
+4 - cat id_ed25519.pub (usar a chave publica);
+
+5 - Copiar a chave;
+
+No GitHub
+
+6 - Acessar o menu 'Settings';
+
+7 - Em acess entrar em SSH and GPG keys;
+
+8 - New SSH key;
+
+9 - Preencher o titulo e colar a chave SSH no campo Key;
+
+10 - Digitar sua senha do GitHub;
+
+No git bash
+
+11 - Dentro da pasta '.ssh' digitar o seguinte comando: eval $(ssh-agent -s);
+
+12 - ssh-add id_ed25519(chave privada);
+
+13 - digitar a senha que foi criada no passo 2;
+
+Pronto ja esta configurado a chaver SSH.
+
+
+
